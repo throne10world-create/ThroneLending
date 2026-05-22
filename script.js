@@ -1,8 +1,32 @@
-// Безопасная версия с проверками
+// Проверка на мобильное устройство
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
 const cursor = document.querySelector('.cursor');
 const outline = document.querySelector('.cursor-outline');
 
-if (cursor && outline) {
+// Функция для управления курсором
+function handleCursor() {
+    if (window.innerWidth <= 768) {
+        // Скрываем курсор на мобильных
+        if (cursor) cursor.style.display = 'none';
+        if (outline) outline.style.display = 'none';
+        document.body.style.cursor = 'auto';
+    } else {
+        // Показываем курсор на десктопе
+        if (cursor) cursor.style.display = 'block';
+        if (outline) outline.style.display = 'block';
+        document.body.style.cursor = 'none';
+    }
+}
+
+// Запускаем при загрузке
+handleCursor();
+
+// Отслеживаем изменение размера окна
+window.addEventListener('resize', handleCursor);
+
+// Обработчик движения мыши (только если не мобильное устройство)
+if (!isMobile && cursor && outline) {
     window.addEventListener('mousemove', (e) => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
@@ -20,6 +44,8 @@ if (cursor && outline) {
         });
     });
 }
+
+// Остальной код...
 
 const reveals = document.querySelectorAll('.reveal');
 if (reveals.length > 0) {
