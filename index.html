@@ -1,38 +1,308 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Трон Десяти Миров</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Основные метатеги -->
+    <title>Трон Десяти Миров | Throne of Ten Worlds - Настольная стратегическая игра</title>
+    <meta name="title" content="Трон Десяти Миров | Throne of Ten Worlds">
+    <meta name="description" content="Трон Десяти Миров - гексагональная стратегическая игра с одновременными ходами. Мир, где важны не только логика, но и предсказание намерений соперника. 127 клеток, несколько путей к победе.">
+    <meta name="keywords" content="настольная игра, стратегия, гексагональная, одновременные ходы, трон десяти миров, throne ten worlds, board game, strategy">
+    <meta name="author" content="Дмитрий Попов, Висляев Алексей">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="copyright" content="© 2026 Throne Ten Worlds">
+    <meta name="rating" content="general">
+    <meta name="generator" content="Visual Studio Code">
+    
+    <!-- Языковые метатеги -->
+    <meta http-equiv="content-language" content="ru, en">
+    <meta name="language" content="Russian, English">
+    
+    <!-- Гео-метатеги -->
+    <meta name="geo.region" content="RU">
+    <meta name="geo.placename" content="Russia">
+    
+    <!-- Основные Open Graph метатеги -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Трон Десяти Миров">
+    <meta property="og:title" content="Трон Десяти Миров | Throne of Ten Worlds">
+    <meta property="og:description" content="Гексагональная стратегическая игра, где оба игрока делают ходы одновременно. Мир, в котором невозможно просчитать всё. Несколько путей к победе.">
+    <meta property="og:url" content="https://throne10world-create.github.io/Throne/">
+    <meta property="og:image" content="https://throne10world-create.github.io/Throne/icon.png">
+    <meta property="og:image:secure_url" content="https://throne10world-create.github.io/Throne/icon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Трон Десяти Миров - логотип">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
+    
+    <!-- Open Graph для Facebook -->
+    <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID">
+    <meta property="article:publisher" content="https://www.facebook.com/profile.php?id=61590254998978">
+    
+    <!-- Open Graph для VK -->
+    <meta property="vk:image" content="https://throne10world-create.github.io/Throne/icon.png">
+    <meta property="vk:title" content="Трон Десяти Миров | Throne of Ten Worlds">
+    <meta property="vk:description" content="Гексагональная стратегическая игра с одновременными ходами">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Throne10World">
+    <meta name="twitter:creator" content="@Throne10World">
+    <meta name="twitter:title" content="Трон Десяти Миров | Throne of Ten Worlds">
+    <meta name="twitter:description" content="Гексагональная стратегическая игра с одновременными ходами. 127 клеток, несколько путей к победе.">
+    <meta name="twitter:image" content="https://throne10world-create.github.io/Throne/icon.png">
+    <meta name="twitter:image:alt" content="Трон Десяти Миров - логотип">
+    <meta name="twitter:url" content="https://throne10world-create.github.io/Throne/">
+    
+    <!-- Discord -->
+    <meta name="discord:image" content="https://throne10world-create.github.io/Throne/icon.png">
+    
+    <!-- Telegram -->
+    <meta property="telegram:image" content="https://throne10world-create.github.io/Throne/icon.png">
+    
+    <!-- Pinterest -->
+    <meta name="pinterest-rich-pin" content="true">
+    <meta name="pinterest:image" content="https://throne10world-create.github.io/Throne/icon.png">
+    
+    <!-- WhatsApp -->
+    <meta property="og:image:whatsapp" content="https://throne10world-create.github.io/Throne/icon.png">
+    
+    <!-- Instagram -->
+    <meta property="al:ios:app_name" content="Instagram">
+    <meta property="al:ios:url" content="instagram://media?id=YOUR_MEDIA_ID">
+    
+    <!-- Microsoft / Windows -->
+    <meta name="msapplication-TileImage" content="https://throne10world-create.github.io/Throne/icon.png">
+    <meta name="msapplication-TileColor" content="#242424">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="application-name" content="Трон Десяти Миров">
+    
+    <!-- Apple метатеги -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Трон 10 Миров">
+    <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="icon.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="icon.png">
+    <link rel="apple-touch-startup-image" href="icon.png">
+    <link rel="mask-icon" href="icon.png" color="#242424">
+    
+    <!-- Android / Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#242424" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#C6CDCF" media="(prefers-color-scheme: light)">
+    
+    <!-- Фавиконки (все размеры) -->
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="icon.png">
+    <link rel="icon" type="image/png" sizes="384x384" href="icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon.png">
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="shortcut icon" type="image/png" href="icon.png">
+    
+    <!-- Manifest для PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Канонический URL -->
+    <link rel="canonical" href="https://throne10world-create.github.io/Throne/">
+    
+    <!-- Альтернативные языковые версии -->
+    <link rel="alternate" hreflang="ru" href="https://throne10world-create.github.io/Throne/">
+    <link rel="alternate" hreflang="en" href="https://throne10world-create.github.io/Throne/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://throne10world-create.github.io/Throne/">
+    
+    <!-- DNS Prefetch для производительности -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Подключение стилей и шрифтов -->
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Schema.org структурированные данные -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Трон Десяти Миров",
+        "alternateName": "Throne of Ten Worlds",
+        "url": "https://throne10world-create.github.io/Throne/",
+        "description": "Гексагональная стратегическая игра с одновременными ходами",
+        "image": "https://throne10world-create.github.io/Throne/icon.png",
+        "author": {
+            "@type": "Organization",
+            "name": "Throne Ten Worlds",
+            "url": "https://throne10world-create.github.io/Throne/"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://throne10world-create.github.io/Throne/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Трон Десяти Миров",
+        "alternateName": "Throne of Ten Worlds",
+        "description": "Настольная стратегическая игра с гексагональным полем и одновременными ходами",
+        "genre": ["Strategy", "Board Game"],
+        "numberOfPlayers": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 2
+        },
+        "image": "https://throne10world-create.github.io/Throne/icon.png",
+        "url": "https://throne10world-create.github.io/Throne/",
+        "author": {
+            "@type": "Person",
+            "name": "Дмитрий Попов"
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "Висляев Алексей"
+        }
+    }
+    </script>
 </head>
 <body>
 
-
+<!-- Chess background animation -->
+<div class="chess-bg">
+    <div class="chess-piece">♔</div>
+    <div class="chess-piece">♕</div>
+    <div class="chess-piece">♖</div>
+    <div class="chess-piece">♗</div>
+    <div class="chess-piece">♘</div>
+    <div class="chess-piece">♙</div>
+    <div class="chess-piece">♚</div>
+    <div class="chess-piece">♛</div>
+    <div class="chess-piece">♜</div>
+    <div class="chess-piece">♝</div>
+</div>
 
 <header class="header">
     <nav class="navbar">
-        <div class="logo">ТРОН X МИРОВ</div>
+        <!-- Логотип слева -->
+        <div class="logo">
+            <img src="logoLighttheme.png" alt="Logo" class="logo-img">
+            <span class="logo-text" data-translate="logo">ТРОН X МИРОВ</span>
+        </div>
 
+        <!-- Навигация для десктопа -->
         <ul class="nav-links">
-            <li><a href="#about">Об Игре</a></li>
-            <li><a href="#problems">Особенности</a></li>
-            <li><a href="#gallery">Галерея</a></li>
-            <li><a href="#videos">Видео</a></li>
-            <li><a href="#socials">Соцсети</a></li>
+            <li><a href="#about" data-translate="about">Об Игре</a></li>
+            <li><a href="#problems" data-translate="problems">Особенности</a></li>
+            <li><a href="#gallery" data-translate="gallery">Галерея</a></li>
+            <li><a href="#videos" data-translate="videos">Видео</a></li>
+            <li><a href="#socials" data-translate="socials">Соцсети</a></li>
         </ul>
 
-        
-        <a class="play-btn" href="https://t.me/throne10world" target="_blank" class="glass reveal">
-            <i class="fab fa-telegram-plane"></i> Telegram
-        </a>
+        <!-- Группа элементов справа -->
+        <div class="nav-right-group">
+            <!-- Переключатели языка и темы -->
+            <div class="desktop-controls">
+                <div class="desktop-lang-switcher">
+                    <button class="lang-option active" data-lang="ru">RU</button>
+                    <button class="lang-option" data-lang="en">EN</button>
+                </div>
+                
+                <button class="desktop-theme-btn" aria-label="Switch theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <!-- Кнопка GitHub -->
+            <a class="play-btn desktop-github" href="https://t.me/throne10world" target="_blank">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+        </div>
+
+        <!-- Бургер-меню для мобильных -->
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 </header>
+
+<!-- Мобильное меню -->
+<div class="mobile-menu">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-content">
+        <!-- Кнопка закрытия -->
+        <button class="close-menu" aria-label="Закрыть меню">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <!-- Переключатель языка в бургере -->
+        <div class="mobile-lang-switcher">
+            <span class="lang-label" data-translate="languageLabel">Язык / Language</span>
+            <div class="lang-buttons">
+                <button class="lang-option active" data-lang="ru">RU</button>
+                <button class="lang-option" data-lang="en">EN</button>
+            </div>
+        </div>
+        
+        <!-- Навигация -->
+        <ul class="mobile-nav-links">
+            <li><a href="#about" data-translate="about">Об Игре</a></li>
+            <li><a href="#problems" data-translate="problems">Особенности</a></li>
+            <li><a href="#gallery" data-translate="gallery">Галерея</a></li>
+            <li><a href="#videos" data-translate="videos">Видео</a></li>
+            <li><a href="#socials" data-translate="socials">Соцсети</a></li>
+        </ul>
+        
+        <!-- Кнопка GitHub -->
+        
+        <a class="mobile-github-btn" href="https://t.me/throne10world" target="_blank" class="glass reveal">
+            <i class="fab fa-telegram-plane"></i> Telegram
+        </a>
+        
+        <!-- Переключатель темы -->
+        <button class="mobile-theme-btn" aria-label="Switch theme">
+            <i class="fas fa-moon"></i>
+            <span data-translate="themeLabel">Тема / Theme</span>
+        </button>
+    </div>
+</div>
 
 <section class="hero">
     <div class="floating floating-1"></div>
@@ -40,29 +310,29 @@
     <div class="floating floating-3"></div>
 
     <div class="hero-content">
-        <span class="hero-badge">Настольная стратегия нового поколения</span>
+        <span class="hero-badge" data-translate="heroBadge">Настольная стратегия нового поколения</span>
 
-        <h1>
+        <h1 data-translate="heroTitle">
             ТРОН<br>
             <span>ДЕСЯТИ МИРОВ</span>
         </h1>
 
-        <p>
+        <p data-translate="heroDesc">
             Гексагональная стратегическая игра, где оба игрока делают ходы одновременно.
             Мир, в котором невозможно просчитать всё. Мир, где важны не только логика,
             но и предсказание намерений соперника.
         </p>
 
         <div class="hero-buttons">
-            <a href="#about" class="primary-btn">Исследовать мир</a>
+            <a href="#about" class="primary-btn" data-translate="exploreBtn">Исследовать мир</a>
             <a href="https://www.youtube.com/@Throne.10.Worlds" target="_blank" class="secondary-btn">
-                <i class="fab fa-youtube"></i> Смотреть видео
+                <i class="fab fa-youtube"></i> <span data-translate="watchBtn">Смотреть видео</span>
             </a>
         </div>
     </div>
 
     <div class="hero-image">
-        <img src="1.jpg" alt="Трон Десяти Миров">
+        <img src="first.png" alt="Трон Десяти Миров">
     </div>
 
     
@@ -70,30 +340,30 @@
 
 <section class="about section" id="about">
     <div class="section-title">
-        <span>ОПИСАНИЕ</span>
-        <h2>Что такое «Трон Десяти Миров»?</h2>
+        <span data-translate="aboutLabel">ОПИСАНИЕ</span>
+        <h2 data-translate="aboutTitle">Что такое «Трон Десяти Миров»?</h2>
     </div>
 
     <div class="about-grid">
         <div class="about-card glass">
-            <h3>127 клеток</h3>
-            <p>
+            <h3 data-translate="feature1Title">127 клеток</h3>
+            <p data-translate="feature1Desc">
                 Игровое поле состоит из 127 гексагональных клеток, создающих уникальную
                 стратегическую геометрию и огромное количество вариантов развития партии.
             </p>
         </div>
 
         <div class="about-card glass">
-            <h3>Одновременные ходы</h3>
-            <p>
+            <h3 data-translate="feature2Title">Одновременные ходы</h3>
+            <p data-translate="feature2Desc">
                 Оба игрока одновременно фиксируют действия фигур, а затем раскрывают их.
                 Это уничтожает преимущество первого хода и делает партии непредсказуемыми.
             </p>
         </div>
 
         <div class="about-card glass">
-            <h3>Несколько путей к победе</h3>
-            <p>
+            <h3 data-translate="feature3Title">Несколько путей к победе</h3>
+            <p data-translate="feature3Desc">
                 Победить можно захватом Трона Королём, постановкой Мата,
                 Осадой Замка или лишением противника возможных ходов.
             </p>
@@ -101,7 +371,7 @@
     </div>
 
     <div class="description-box glass">
-        <p>
+        <p data-translate="aboutDesc1">
             «Трон Десяти Миров» — настольная стратегическая игра,
             в которой два игрока одновременно фиксируют ходы фигур,
             после чего перемещают их на гексагональном поле.
@@ -109,7 +379,7 @@
             здесь отсутствует понятие «идеального» хода.
         </p>
 
-        <p>
+        <p data-translate="aboutDesc2">
             Игрокам приходится учитывать психологию соперника,
             просчитывать облака возможных действий и адаптироваться
             к постоянно меняющейся ситуации на поле.
@@ -119,16 +389,16 @@
 
 <section class="problems section" id="problems">
     <div class="section-title">
-        <span>КОНЦЕПЦИЯ</span>
-        <h2>Три фундаментальные проблемы игр</h2>
+        <span data-translate="conceptLabel">КОНЦЕПЦИЯ</span>
+        <h2 data-translate="conceptTitle">Три фундаментальные проблемы игр</h2>
     </div>
 
     <div class="timeline">
         <div class="timeline-item glass reveal">
             <div class="timeline-number">01</div>
             <div>
-                <h3>Проблема первого хода</h3>
-                <p>
+                <h3 data-translate="problem1Title">Проблема первого хода</h3>
+                <p data-translate="problem1Desc">
                     Во многих стратегиях первый игрок получает преимущество.
                     В «Троне» оба игрока находятся в полностью равных условиях.
                     Одновременные действия создают честный баланс 50/50.
@@ -139,8 +409,8 @@
         <div class="timeline-item glass reveal">
             <div class="timeline-number">02</div>
             <div>
-                <h3>Проблема машинного счета</h3>
-                <p>
+                <h3 data-translate="problem2Title">Проблема машинного счета</h3>
+                <p data-translate="problem2Desc">
                     Компьютеры уже превзошли человека в шахматах, го и шашках.
                     Но в «Троне» невозможно просчитать все варианты,
                     потому что игроки действуют одновременно.
@@ -151,8 +421,8 @@
         <div class="timeline-item glass reveal">
             <div class="timeline-number">03</div>
             <div>
-                <h3>Проблема ничьих</h3>
-                <p>
+                <h3 data-translate="problem3Title">Проблема ничьих</h3>
+                <p data-translate="problem3Desc">
                     В игре отсутствует единственный «лучший ход».
                     Вместо этого существуют облака сильнейших решений,
                     зависящие от поведения соперника.
@@ -164,8 +434,8 @@
 
 <section class="gallery section" id="gallery">
     <div class="section-title">
-        <span>ГАЛЕРЕЯ</span>
-        <h2>Мир Трона</h2>
+        <span data-translate="galleryLabel">ГАЛЕРЕЯ</span>
+        <h2 data-translate="galleryTitle">Мир Трона</h2>
     </div>
 
     <div class="gallery-grid">
@@ -189,35 +459,35 @@
 
 <section class="videos section" id="videos">
     <div class="section-title">
-        <span>ВИДЕО</span>
-        <h2>Видео-контент проекта</h2>
+        <span data-translate="videosLabel">ВИДЕО</span>
+        <h2 data-translate="videosTitle">Видео-контент проекта</h2>
     </div>
 
     <div class="links-grid">
         <a href="https://www.youtube.com/@Throne.10.Worlds" target="_blank" class="social-link glass reveal">
             <div class="post-icon"><i class="fab fa-youtube"></i></div>
             <h3>YouTube (RUS)</h3>
-            <p>Русскоязычный канал проекта</p>
+            <p data-translate="youtubeRus">Русскоязычный канал проекта</p>
         </a>
 
         <a href="https://www.youtube.com/@Throne-10-world" target="_blank" class="social-link glass reveal">
             <div class="post-icon"><i class="fab fa-youtube"></i></div>
             <h3>YouTube (ENG)</h3>
-            <p>Англоязычный канал проекта</p>
+            <p data-translate="youtubeEng">Англоязычный канал проекта</p>
         </a>
 
         <a href="https://rutube.ru/channel/78520668/" target="_blank" class="social-link glass reveal">
             <div class="post-icon"><i class="fas fa-play"></i></div>
             <h3>RuTube</h3>
-            <p>Видео и материалы проекта</p>
+            <p data-translate="rutube">Видео и материалы проекта</p>
         </a>
     </div>
 </section>
 
 <section class="socials section" id="socials">
     <div class="section-title">
-        <span>СОЦСЕТИ</span>
-        <h2>Следите за проектом</h2>
+        <span data-translate="socialsLabel">СОЦСЕТИ</span>
+        <h2 data-translate="socialsTitle">Следите за проектом</h2>
     </div>
 
     <div class="socials-grid">
@@ -248,7 +518,7 @@
         <a href="https://www.threads.com/@throne.10.world" target="_blank" class="glass reveal">
             <i class="fab fa-threads"></i> Threads
         </a>
-        <a href="https://github.com/throne10world-create/Throne" target="_blank" class="glass reveal">
+        <a href="https://github.com/throne10world-create" target="_blank" class="glass reveal">
             <i class="fab fa-github"></i> GitHub
         </a>
         <a href="https://www.pinterest.com/throne10world/" target="_blank" class="glass reveal">
@@ -264,16 +534,35 @@
 </section>
 
 <footer class="footer">
-    <h2>ТРОН ДЕСЯТИ МИРОВ</h2>
-    <p>
+    <h2 data-translate="footerTitle">ТРОН ДЕСЯТИ МИРОВ</h2>
+    <p data-translate="footerDesc">
         Стратегия. Предсказание. Одновременные ходы.
     </p>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-creators">
+        <div class="creator">
+            <span class="creator-label" data-translate="ideaAuthor">Создатель идеи</span>
+            <span class="creator-name">Дмитрий Попов</span>
+        </div>
+        <div class="creator-divider"></div>
+        <div class="creator">
+            <span class="creator-label" data-translate="developer">Разработчик и дизайнер</span>
+            <span class="creator-name">Висляев Алексей</span>
+        </div>
+    </div>
 
     <div class="footer-line"></div>
 
     <span>© 2026 Throne Ten Worlds</span>
 </footer>
 
+<button class="scroll-to-top" aria-label="Наверх">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
 <script src="script.js"></script>
 </body>
+
 </html>
