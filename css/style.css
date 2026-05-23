@@ -1089,7 +1089,7 @@ body::after {
     min-width: 60px;
 }
 
-/* Адаптивность */
+
 @media (max-width: 1100px) {
     .desktop-lang-switcher {
         display: none;
@@ -1102,7 +1102,6 @@ body::after {
     }
 }
 
-/* Для очень маленьких экранов */
 @media (max-width: 480px) {
     .lang-option {
         padding: 8px 15px;
@@ -1112,5 +1111,16 @@ body::after {
     .lang-buttons .lang-option {
         padding: 8px 18px;
         font-size: 0.9rem;
+    }
+}
+
+
+.desktop-only {
+    display: flex;
+}
+
+@media (max-width: 1100px) {
+    .desktop-only {
+        display: none;
     }
 }
